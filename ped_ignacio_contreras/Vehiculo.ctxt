@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Vehiculo
+comment1.params=color\ numeroPlazas\ tara\ pesoMaxAutorizado
+comment1.target=Vehiculo(java.lang.String,\ int,\ double,\ double)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Vehiculo\r\n\ \r\n\ @param\ Color\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Color\ del\ vehiculo\r\n\ @param\ numeroPlazas\ \ \ \ \ \ \ \ \ \ Numero\ de\ plazas\ del\ vehiculo\r\n\ @param\ tara\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tara\ del\ vehiculo\ en\ kg\r\n\ @param\ pesoMaxAutorizado\ \ \ \ \ Peso\ m\u00E1ximo\ autorizado\ del\ vehiculo\ en\ kg\r\n
+comment10.params=
+comment10.target=void\ avanzarEstado()
+comment10.text=\r\n\ Metodo\ para\ avanzar\ el\ estado\ del\ vehiculo\ al\ siguiente\ paso\ de\ la\ cadena\ de\ montaje\r\n
+comment2.params=
+comment2.target=java.lang.String\ getColor()
+comment3.params=color
+comment3.target=void\ setColor(java.lang.String)
+comment4.params=
+comment4.target=int\ getNumeroPlazas()
+comment5.params=numeroPlazas
+comment5.target=void\ setNumeroPlazas(int)
+comment6.params=
+comment6.target=double\ getTara()
+comment7.params=tara
+comment7.target=void\ setTara(double)
+comment8.params=
+comment8.target=double\ getPesoMaximoAutorizado()
+comment9.params=pesoMaxAutorizado
+comment9.target=void\ setPesoMaximoAutorizado(double)
+numComments=11

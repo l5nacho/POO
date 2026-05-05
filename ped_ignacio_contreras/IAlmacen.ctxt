@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=IAlmacen
+comment1.params=t
+comment1.target=void\ registrarTrabajador(Trabajador)
+comment2.params=
+comment2.target=java.util.List\ getTrabajadores()
+comment3.params=m
+comment3.target=void\ almacenarMotor(Componentes.Motor)
+comment4.params=t
+comment4.target=void\ almacenarTapiceria(Componentes.Tapiceria)
+comment5.params=r
+comment5.target=void\ almacenarRueda(Componentes.Rueda)
+comment6.params=v
+comment6.target=void\ almacenarVehiculo(Vehiculo)
+comment7.params=
+comment7.target=java.util.List\ getVehiculosEnStock()
+numComments=8

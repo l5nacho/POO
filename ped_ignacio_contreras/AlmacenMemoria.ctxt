@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=AlmacenMemoria
+comment1.params=
+comment1.target=AlmacenMemoria()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ AlmacenMemoria\r\n
+comment2.params=t
+comment2.target=void\ registrarTrabajador(Trabajador)
+comment3.params=
+comment3.target=java.util.List\ getTrabajadores()
+comment4.params=m
+comment4.target=void\ almacenarMotor(Componentes.Motor)
+comment5.params=t
+comment5.target=void\ almacenarTapiceria(Componentes.Tapiceria)
+comment6.params=r
+comment6.target=void\ almacenarRueda(Componentes.Rueda)
+comment7.params=v
+comment7.target=void\ almacenarVehiculo(Vehiculo)
+comment8.params=
+comment8.target=java.util.List\ getVehiculosEnStock()
+numComments=9
