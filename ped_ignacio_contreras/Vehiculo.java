@@ -1,12 +1,3 @@
-
-/**
- * Clase abstracta que representa a un vehiculo
- * 
- * @author Ignacio Contreras
- * @version v1 20260427
- */
-
-// FALTA IMPLEMENTAR EL PAQUETE COMPONENTES
 import Componentes.Motor;
 import Componentes.Tapiceria;
 import Componentes.Rueda;

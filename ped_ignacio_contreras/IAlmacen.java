@@ -1,11 +1,3 @@
-
-/**
- * Write a description of interface IAlmacen here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import java.util.List;
 import Componentes.Motor;
 import Componentes.Tapiceria;

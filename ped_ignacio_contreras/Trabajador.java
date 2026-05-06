@@ -1,11 +1,4 @@
 
-/**
- * Write a description of class Trabajador here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-
 import java.util.Date;
 
 public abstract class Trabajador
