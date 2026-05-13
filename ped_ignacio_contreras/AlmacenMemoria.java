@@ -67,5 +67,41 @@ public class AlmacenMemoria implements IAlmacen
     {
         return this.stockVehiculos;
     }
+    
+    @Override
+    public int contarMotoresDisponibles()
+    {
+        return this.stockMotores.size();
+    }
+    
+    //Faltan el resto de metodos de contar
+    
+    @Override
+    public List<Operario> getOperariosDisponibles() 
+    {
+        List<Operario> operarios = new ArrayList();
+        for (Trabajador t : plantillaTrabajadores) 
+        {
+            if (t instanceof Operario) 
+            {
+                operarios.add((Operario) t);
+            }
+        }
+        
+        return operarios;
+    }
+    
+    @Override
+    public List<MecanicoDeCinta> getMecanicosDisponibles()
+    {
+        List<MecanicoDeCinta> mecanicos = new ArrayList();
+        for (Trabajador t : plantillaTrabajadores)
+        {
+            if (t instanceof MecanicoDeCinta)
+            {
+                mecanicos.add((MecanicoDeCinta) t);
+            }
+        }
+    }
 
 }

@@ -17,4 +17,12 @@ public interface IAlmacen
     // Gestion de vehiculos
     void almacenarVehiculo(Vehiculo v);
     List<Vehiculo> getVehiculosEnStock();
+    
+    int contarMotoresDisponibles();
+    int contarRuedasDisponibles();
+    int contarTapiceriasDisponibles();
+    int contarVehiculosEnStock();
+    
+    List<Operario> getOperariosDisponibles();
+    List<MecanicoDeCinta> getMecanicosDisponibles();
 }
