@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Dashboard
+comment0.text=\r\n\ Clase\ encargada\ de\ la\ visualizaci\u00F3n\ de\ los\ datos\ del\ sistema.\r\n\ Act\u00FAa\ de\ forma\ desacoplada\:\ solo\ lee\ del\ almac\u00E9n\ y\ formatea\ la\ salida\ por\ pantalla.\r\n
+comment1.params=almacen
+comment1.target=Dashboard(IAlmacen)
+comment2.params=
+comment2.target=void\ mostrarResumenGeneral()
+comment2.text=\r\n\ Muestra\ una\ vista\ general\ de\ todo\ el\ inventario\ de\ la\ f\u00E1brica.\r\n
+comment3.params=
+comment3.target=void\ mostrarDetalleTrabajadores()
+comment3.text=\r\n\ Muestra\ el\ detalle\ de\ la\ plantilla\ con\ sus\ nombres\ y\ puestos.\r\n
+numComments=4

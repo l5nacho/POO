@@ -74,6 +74,24 @@ public class AlmacenMemoria implements IAlmacen
         return this.stockMotores.size();
     }
     
+    @Override 
+    public int contarRuedasDisponibles()
+    {
+        return this.stockRuedas.size();
+    }
+    
+    @Override
+    public int contarTapiceriasDisponibles() 
+    {
+        return this.stockTapicerias.size();
+    }
+    
+    @Override
+    public int contarVehiculosEnStock()
+    {
+        return this.stockVehiculos.size();
+    }
+    
     //Faltan el resto de metodos de contar
     
     @Override
@@ -102,6 +120,8 @@ public class AlmacenMemoria implements IAlmacen
                 mecanicos.add((MecanicoDeCinta) t);
             }
         }
+        return mecanicos;
     }
+
 
 }
