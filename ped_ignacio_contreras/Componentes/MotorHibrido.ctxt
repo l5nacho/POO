@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=MotorHibrido
+comment1.params=cilindrada\ potencia\ numeroCilindros
+comment1.target=MotorHibrido(double,\ double,\ int)
+numComments=2

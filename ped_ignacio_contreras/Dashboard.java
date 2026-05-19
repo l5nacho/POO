@@ -57,4 +57,39 @@ public class Dashboard
         }
         System.out.println("----------------------------\n");
     }
+    
+    public void mostrarOperariosAlfabeticamente()
+    {
+        System.out.println("\n--- LISTADO DE OPERARIOS (ALFÄBETICO) ---");
+        
+        // Pedimos la lista al almacen
+        List<Operario> operarios = almacen.getOperariosDisponibles();
+        
+        // Copiamos la lista para no alterar el original
+        List<Operario> listaOrdenada = new java.util.ArrayList<>(operarios);
+        
+        // Ordenamos la lista
+        listaOrdenada.sort((op1, op2) -> op1.getNombre().compareToIgnoreCase(op2.getNombre()));
+        
+        // Imprimimos el resultado
+        for (Operario op : listaOrdenada) 
+        {
+            System.out.println("-" + op.getNombre() + " | Productividad: " + op.getMontajesRealizados());
+        }
+    }
+    
+    public void mostrarOperariosPorProductividad() 
+    {
+        System.out.println("\n--- LISTADO DE OPERARIOS (POR PRODUCTIVIDAD) ---");
+        
+        List<Operario> operarios = almacen.getOperariosDisponibles();
+        List<Operario> listaOrdenada = new java.util.ArrayList<>(operarios);
+        
+        // Para ordenar de MAYOR a MENOR productividad, comparamos el op2 con el op1 (al revés)
+        listaOrdenada.sort((op1, op2) -> Integer.compare(op2.getMontajesRealizados(), op1.getMontajesRealizados()));
+        
+        for (Operario op : listaOrdenada) {
+            System.out.println("- " + op.getNombre() + " | Productividad: " + op.getMontajesRealizados());
+        }
+    }
 }

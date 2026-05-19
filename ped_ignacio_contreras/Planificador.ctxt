@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Planificador
+comment1.params=almacen
+comment1.target=Planificador(IAlmacen)
+comment2.params=vehiculo\ modo
+comment2.target=void\ fabricarVehiculo(Vehiculo,\ int)
+comment3.params=operario
+comment3.target=int\ simularTrabajo(Operario)
+numComments=4

@@ -7,9 +7,6 @@ public abstract class Motor
     private int numeroCilindros;
     private TipoMotor tipo;
 
-    /**
-     * Constructor for objects of class Motor
-     */
     public Motor(double cilindrada, double potencia, int numeroCilindros, TipoMotor tipo)
     {
         this.cilindrada = cilindrada;
@@ -30,35 +27,4 @@ public abstract class Motor
     public void setNumeroCilindros(int numeroCilindros) {this.numeroCilindros = numeroCilindros;}
     
     public TipoMotor getTipo() {return tipo;}
-}
-
-class MotorElectrico extends Motor 
-{   
-    public MotorElectrico(double cilindrada, double potencia, int numeroCilindros) 
-    {
-        super(0.0, potencia, 0, TipoMotor.ELECTRICO);
-    }
-
-}
-
-
-class MotorGasolina extends Motor 
-{
-    public MotorGasolina(double cilindrada, double potencia, int numeroCilindros) 
-    {
-        super(cilindrada, potencia, numeroCilindros, TipoMotor.GASOLINA);
-    }
-}
-
-class MotorHibrido extends Motor 
-{
-    public MotorHibrido(double cilindrada, double potencia, int numeroCilindros) 
-    {
-        super(cilindrada, potencia, numeroCilindros, TipoMotor.HIBRIDO);
-    }
-}
-
-enum TipoMotor
-{
-    ELECTRICO, GASOLINA, HIBRIDO
 }

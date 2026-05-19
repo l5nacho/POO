@@ -25,4 +25,9 @@ public interface IAlmacen
     
     List<Operario> getOperariosDisponibles();
     List<MecanicoDeCinta> getMecanicosDisponibles();
+    
+    // Metodos para extraer componentes del almacen 
+    Motor extraerMotor();
+    Rueda extraerRuedas();
+    Tapiceria extraerTapiceria();
 }

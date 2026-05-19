@@ -92,8 +92,6 @@ public class AlmacenMemoria implements IAlmacen
         return this.stockVehiculos.size();
     }
     
-    //Faltan el resto de metodos de contar
-    
     @Override
     public List<Operario> getOperariosDisponibles() 
     {
@@ -121,6 +119,33 @@ public class AlmacenMemoria implements IAlmacen
             }
         }
         return mecanicos;
+    }
+    
+    public Motor extraerMotor()
+    {
+        if (!stockMotores.isEmpty()) 
+        {
+            return stockMotores.remove(0);
+        }
+        return null;
+    }
+    
+    public Rueda extraerRuedas()
+    {
+        if (!stockRuedas.isEmpty())
+        {
+            return stockRuedas.remove(0);
+        }
+        return null;
+    }
+    
+    public Tapiceria extraerTapiceria()
+    {
+        if (!stockTapicerias.isEmpty())
+        {
+            return stockTapicerias.remove(0);
+        }
+        return null;
     }
 
 

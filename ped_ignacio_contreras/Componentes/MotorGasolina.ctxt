@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=MotorGasolina
+comment1.params=cilindrada\ potencia\ numeroCilindros
+comment1.target=MotorGasolina(double,\ double,\ int)
+numComments=2

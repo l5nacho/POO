@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=MotorElectrico
+comment1.params=potencia
+comment1.target=MotorElectrico(double)
+numComments=2

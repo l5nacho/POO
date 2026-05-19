@@ -71,6 +71,11 @@ class Operario extends Trabajador
         {
             this.montajesRealizados++;
         }
+        
+        public int getMontajesRealizados() 
+        {
+            return montajesRealizados;
+        }
     }
     
 class MecanicoDeCinta extends Trabajador

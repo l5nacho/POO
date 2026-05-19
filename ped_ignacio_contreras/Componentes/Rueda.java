@@ -36,31 +36,3 @@ public abstract class Rueda
     
     
 }
-class RuedaNormal extends Rueda 
-{
-    public RuedaNormal(double ancho, double diametro, double carga, String codigoVelocidad) 
-    {
-        super(ancho, diametro, carga, codigoVelocidad, TipoRueda.NORMAL);
-    }
-}
-
-class RuedaDeportiva extends Rueda 
-{
-    public RuedaDeportiva(double ancho, double diametro, double carga, String codigoVelocidad) 
-    {
-        super(ancho, diametro, carga, codigoVelocidad, TipoRueda.DEPORTIVA);
-    }
-}
-
-class RuedaTodoterreno extends Rueda
-{
-    public RuedaTodoterreno(double ancho, double diametro, double carga, String codigoVelocidad) 
-    {
-        super(ancho, diametro, carga, codigoVelocidad, TipoRueda.TODOTERRENO);
-    }
-}
-
-enum TipoRueda 
-{
-    NORMAL, DEPORTIVA, TODOTERRENO
-}

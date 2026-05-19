@@ -38,6 +38,7 @@ public abstract class Vehiculo
         this.estado = EstadoVehiculo.CHASIS;
 
     }
+    
 
     // Getters y Setters
     
@@ -52,42 +53,43 @@ public abstract class Vehiculo
     
     public double getPesoMaximoAutorizado(){return pesoMaxAutorizado;}
     public void setPesoMaximoAutorizado(double pesoMaxAutorizado) {this.pesoMaxAutorizado = pesoMaxAutorizado;}
-        
     
-    /**
-     * Metodo para avanzar el estado del vehiculo al siguiente paso de la cadena de montaje
-     */
-    
-    public void avanzarEstado() 
+    public EstadoVehiculo getEstado() 
     {
-        switch (this.estado) {
-            case CHASIS:
-                this.estado = EstadoVehiculo.MOTOR;
-                break;
-            
-            case MOTOR:
-                this.estado = EstadoVehiculo.TAPICERIA;
-                break;
-                
-            case TAPICERIA:
-                this.estado = EstadoVehiculo.RUEDAS;
-                break;
-                
-            case RUEDAS:
-                this.estado = EstadoVehiculo.TERMINADO;
-                break;
-                
-            case TERMINADO:
-                System.out.println("El vehiculo ya está terminado");
-                break;
-        }
-    
+        return this.estado;
     }
+   
+    
+    public void avanzarEstado() {
+    System.out.println("DEBUG: Intentando avanzar desde " + this.estado); // Línea de depuración
+    switch (this.estado) {
+        case CHASIS:
+            this.estado = EstadoVehiculo.MOTOR;
+            break;
+        case MOTOR:
+            this.estado = EstadoVehiculo.TAPICERIA;
+            break;
+        case TAPICERIA:
+            this.estado = EstadoVehiculo.RUEDAS;
+            break;
+        case RUEDAS:
+            this.estado = EstadoVehiculo.TERMINADO;
+            break;
+        default:
+            System.out.println("DEBUG: No se reconoció el estado");
+            break;
+    }
+    System.out.println("DEBUG: Nuevo estado: " + this.estado); // Línea de depuración
+}
+
+    public void setMotor(Motor motor) {this.motor = motor;}
+    public void setTapiceria(Tapiceria tapiceria) {this.tapiceria = tapiceria;}
+    public void setRueda(Rueda rueda) {this.rueda = rueda;}
 }
 
 class BiplazaDeportivo extends Vehiculo 
 {
-    public BiplazaDeportivo(String color, int numeroPlazas, double tara, double pesoMaxAutorizado)
+    public BiplazaDeportivo(String color, double tara, double pesoMaxAutorizado)
     {
         super(color, 2, tara, pesoMaxAutorizado);
     }
@@ -108,3 +110,5 @@ class Furgoneta extends Vehiculo
         super(color, numeroPlazas, tara, pesoMaxAutorizado);
     }
 }
+
+

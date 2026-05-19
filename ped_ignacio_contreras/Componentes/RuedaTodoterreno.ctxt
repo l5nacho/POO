@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=RuedaTodoterreno
+comment1.params=ancho\ diametro\ carga\ codigoVelocidad
+comment1.target=RuedaTodoterreno(double,\ double,\ double,\ java.lang.String)
+numComments=2

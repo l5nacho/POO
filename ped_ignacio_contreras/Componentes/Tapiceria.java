@@ -25,33 +25,3 @@ public abstract class Tapiceria
     
 }
 
-class TapiceriaTela extends Tapiceria 
-{
-    public TapiceriaTela(String color, double metrosCuadrados) 
-    {   
-        super(color, metrosCuadrados, TipoTapiceria.TELA);
-    }
-}
-
-class TapiceriaCuero extends Tapiceria
-{
-    public TapiceriaCuero(String color, double metrosCuadrados)
-    {
-        super(color, metrosCuadrados, TipoTapiceria.CUERO);
-    }
-}
-
-class TapiceriaAlcantara extends Tapiceria
-{
-    public TapiceriaAlcantara(String color, double metrosCuadrados)
-    {
-        super(color, metrosCuadrados, TipoTapiceria.ALCANTARA);
-    }
-}
-
-
-
-enum TipoTapiceria 
-{
-    TELA, CUERO, ALCANTARA
-}
