@@ -17,6 +17,7 @@ public class factory_main {
         almacen.registrarTrabajador(new Operario("Ana", "Gómez", "222", "Dir2", "SS2", 1500, hoy));
         almacen.registrarTrabajador(new Operario("Carlos", "López", "333", "Dir3", "SS3", 1550, hoy));
         almacen.registrarTrabajador(new MecanicoDeCinta("Beatriz", "Ruiz", "444", "Dir4", "SS4", 1800, hoy));
+        almacen.registrarTrabajador(new AdministradorDelSistema("Joe", "Pesci", "555", "Dir5", "SS5", 2500, hoy));
         
         System.out.println("--- 2. RECEPCIÓN DE MERCANCÍAS ---");
         // Compramos 3 de cada para que haya stock de sobra
@@ -38,9 +39,9 @@ public class factory_main {
         Vehiculo coche3 = new Furgoneta("Blanco", 3, 1800.0, 3500.0);
         
         // El planificador usará a los operarios disponibles y gastará el stock
-        planificador.fabricarVehiculo(coche1, 1);
-        planificador.fabricarVehiculo(coche2, 1);
-        planificador.fabricarVehiculo(coche3, 1);
+        planificador.fabricarVehiculo(coche1, 2);
+        planificador.fabricarVehiculo(coche2, 2);
+        planificador.fabricarVehiculo(coche3, 2);
         
         System.out.println("\n--- 4. ESTADO FINAL DEL SISTEMA ---");
         panel.mostrarResumenGeneral();

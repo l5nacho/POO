@@ -6,4 +6,6 @@ comment2.params=vehiculo\ modo
 comment2.target=void\ fabricarVehiculo(Vehiculo,\ int)
 comment3.params=operario
 comment3.target=int\ simularTrabajo(Operario)
-numComments=4
+comment4.params=mecanico
+comment4.target=int\ simularReparacion(MecanicoDeCinta)
+numComments=5

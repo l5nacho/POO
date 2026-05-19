@@ -25,15 +25,39 @@ public class Planificador
             System.out.println("¡ALERTA! No hay operarios disponibles");
             return;
         }
-        
-        Operario currante = operarios.get(0);
-        System.out.println("Operario asignado a la cadena: " + currante.getNombre() + " (Eficiente: " + currante.isEficiente() + ")");
-        
+    
         boolean roturaDeStock = false;
+        int turno = 0;
         
         while (vehiculo.getEstado() != EstadoVehiculo.TERMINADO && !roturaDeStock)
         {
             System.out.println("\nProcesando fase " + vehiculo.getEstado());
+            
+            Operario currante = operarios.get(turno % operarios.size());
+            System.out.println("   -> Trabajador en esta estación: " + currante.getNombre() + " (Eficiente: " + currante.isEficiente() + ")");
+            turno++;
+            
+            if (modo >= 2) 
+            {
+                // 20% de posibilidades de que la maquina se atasque
+                if (Math.random() < 0.20)
+                {
+                    System.out.println("  [ALERTA] La cinta se ha atascado, es necesario llamar a un mecanico");
+                    
+                    List<MecanicoDeCinta> mecanicos = almacen.getMecanicosDisponibles();
+                    
+                    if (!mecanicos.isEmpty()) {
+                        MecanicoDeCinta mecanico = mecanicos.get(0);
+                        System.out.println("   -> Llamando al mecanico "+ mecanico.getNombre());
+                        simularReparacion(mecanico);
+                        mecanico.registrarReparacion();
+                        System.out.println("  [INFORMACION] Cinta operativa de nuevo, volvemos a producir");
+                    } else {
+                        System.out.println("  [ERROR] No hay mecanicos en la fabrica. Sal a contratar alguno");
+                        break;
+                    }
+                }
+            }
             
             // 1. LLAMAMOS AL RELOJ PARA QUE PASE EL TIEMPO
             simularTrabajo(currante);
@@ -115,6 +139,30 @@ public class Planificador
                 System.out.flush(); // Forzamos a que se imprima al instante
             } catch (InterruptedException e) {
                 System.out.println("Error en el reloj de la simulación");
+            }
+        }
+        return segundos;
+    }
+    
+    private int simularReparacion(MecanicoDeCinta mecanico) 
+    {
+        int segundos = 1;
+        
+        if (!mecanico.isEfectivo()) 
+        {
+            segundos = (int) (Math.random() * 4) + 2;
+        }
+        
+        System.out.println("   [RELOJ-MANTENIMIENTO] El mecanico " + mecanico.getNombre() + " necesita " + segundos + " segundos para reparar la cinta.");
+        
+        for (int i = 1; i <= segundos; i++) 
+        {
+            try {
+                Thread.sleep(1000);
+                System.out.println("  ... tris tras (" + i + "/" + segundos + ") [Reparando]");
+                System.out.flush();
+            } catch (InterruptedException e) {
+                System.out.println("Error en el reloj");
             }
         }
         return segundos;
