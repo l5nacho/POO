@@ -19,14 +19,6 @@ public abstract class Vehiculo
     private Tapiceria tapiceria;
     private Rueda rueda;
 
-    /**
-     * Constructor for objects of class Vehiculo
-     * 
-     * @param Color                 Color del vehiculo
-     * @param numeroPlazas          Numero de plazas del vehiculo
-     * @param tara                  Tara del vehiculo en kg
-     * @param pesoMaxAutorizado     Peso máximo autorizado del vehiculo en kg
-     */
     public Vehiculo(String color, int numeroPlazas, double tara, double pesoMaxAutorizado)
     {   
         this.color = color;
@@ -61,7 +53,7 @@ public abstract class Vehiculo
    
     
     public void avanzarEstado() {
-    System.out.println("DEBUG: Intentando avanzar desde " + this.estado); // Línea de depuración
+    //System.out.println("DEBUG: Intentando avanzar desde " + this.estado); 
     switch (this.estado) {
         case CHASIS:
             this.estado = EstadoVehiculo.MOTOR;
@@ -79,7 +71,7 @@ public abstract class Vehiculo
             System.out.println("DEBUG: No se reconoció el estado");
             break;
     }
-    System.out.println("DEBUG: Nuevo estado: " + this.estado); // Línea de depuración
+    // System.out.println("DEBUG: Nuevo estado: " + this.estado);
 }
 
     public void setMotor(Motor motor) {this.motor = motor;}

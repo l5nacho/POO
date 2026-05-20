@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Dashboard
-comment0.text=\r\n\ Clase\ encargada\ de\ la\ visualizaci\u00F3n\ de\ los\ datos\ del\ sistema.\r\n\ Act\u00FAa\ de\ forma\ desacoplada\:\ solo\ lee\ del\ almac\u00E9n\ y\ formatea\ la\ salida\ por\ pantalla.\r\n
+comment0.text=\r\n\ Clase\ encargada\ de\ la\ visualizaci\u00F3n\ de\ los\ datos\ del\ sistema.\r\n
 comment1.params=almacen
 comment1.target=Dashboard(IAlmacen)
 comment2.params=

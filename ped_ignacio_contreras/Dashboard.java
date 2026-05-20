@@ -2,7 +2,6 @@ import java.util.List;
 
 /**
  * Clase encargada de la visualización de los datos del sistema.
- * Actúa de forma desacoplada: solo lee del almacén y formatea la salida por pantalla.
  */
 public class Dashboard 
 {
