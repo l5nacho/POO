@@ -25,6 +25,7 @@ public interface IAlmacen
     
     List<Operario> getOperariosDisponibles();
     List<MecanicoDeCinta> getMecanicosDisponibles();
+    List<AdministradorDelSistema> getAdministradoresDisponibles();
     
     // Metodos para extraer componentes del almacen 
     Motor extraerMotor();

@@ -121,6 +121,20 @@ public class AlmacenMemoria implements IAlmacen
         return mecanicos;
     }
     
+    @Override
+    public List<AdministradorDelSistema> getAdministradoresDisponibles()
+    {
+        List<AdministradorDelSistema> administrador = new ArrayList();
+        for (Trabajador t : plantillaTrabajadores)
+        {
+            if (t instanceof AdministradorDelSistema)
+            {
+                administrador.add((AdministradorDelSistema) t);
+            }
+        }
+        return administrador;
+    }
+    
     public Motor extraerMotor()
     {
         if (!stockMotores.isEmpty()) 

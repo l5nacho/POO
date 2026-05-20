@@ -8,4 +8,6 @@ comment3.params=operario
 comment3.target=int\ simularTrabajo(Operario)
 comment4.params=mecanico
 comment4.target=int\ simularReparacion(MecanicoDeCinta)
-numComments=5
+comment5.params=admin
+comment5.target=int\ simularReinicioSistema(AdministradorDelSistema)
+numComments=6

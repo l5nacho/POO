@@ -39,9 +39,9 @@ public class factory_main {
         Vehiculo coche3 = new Furgoneta("Blanco", 3, 1800.0, 3500.0);
         
         // El planificador usará a los operarios disponibles y gastará el stock
-        planificador.fabricarVehiculo(coche1, 2);
-        planificador.fabricarVehiculo(coche2, 2);
-        planificador.fabricarVehiculo(coche3, 2);
+        planificador.fabricarVehiculo(coche1, 3);
+        planificador.fabricarVehiculo(coche2, 3);
+        planificador.fabricarVehiculo(coche3, 3);
         
         System.out.println("\n--- 4. ESTADO FINAL DEL SISTEMA ---");
         panel.mostrarResumenGeneral();

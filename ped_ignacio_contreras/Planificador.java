@@ -37,6 +37,30 @@ public class Planificador
             System.out.println("   -> Trabajador en esta estación: " + currante.getNombre() + " (Eficiente: " + currante.isEficiente() + ")");
             turno++;
             
+            // --- NUEVO: MODO 3 (APAGONES CRÍTICOS) ---
+            if (modo == 3) 
+            {
+                // 10% de probabilidad de que se vaya la luz en toda la fábrica
+                if (Math.random() < 0.10) 
+                {
+                    System.out.println("   [¡BLACKOUT!] Apagón general. Sistemas de la fábrica caídos.");
+                    
+                    // Suponiendo que has creado este método en tu almacén:
+                    List<AdministradorDelSistema> admins = almacen.getAdministradoresDisponibles();
+                    
+                    if (!admins.isEmpty()) {
+                        AdministradorDelSistema admin = admins.get(0);
+                        System.out.println("   -> Llamando al Administrador: " + admin.getNombre());
+                        simularReinicioSistema(admin);
+                        System.out.println("   [INFO] Servidores online. Energía restaurada.");
+                    } else {
+                        System.out.println("   [FATAL] No hay administradores contratados. Fin de la simulación.");
+                        break;
+                    }
+                }
+            }
+            // --- FIN NUEVO MODO 3 ---
+            
             if (modo >= 2) 
             {
                 // 20% de posibilidades de que la maquina se atasque
@@ -167,4 +191,22 @@ public class Planificador
         }
         return segundos;
     }
+    
+    private int simularReinicioSistema(AdministradorDelSistema admin) 
+    {
+        int segundos = 3;
+        System.out.println("   [RELOJ-SISTEMA] El administrador" + admin.getNombre() + " esta reiniciando el sistema (" + segundos + " seg)");
+        
+        for (int i= 1; i <= segundos; i++)
+        {
+            try {
+                Thread.sleep(1000);
+                System.out.println("   .... reiniciando (" + i + "/" + segundos + ") [restaurando sistemas]");
+                System.out.flush();
+            } catch (InterruptedException e) {
+                System.out.println("Error en el reloj");
+            }
+        }
+        return segundos;
+        }
 }
